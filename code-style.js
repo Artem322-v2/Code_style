@@ -65,18 +65,20 @@ console.log(total); // Разбирался с помощью нейросети
 // функция должна сразу возвращать ошибку, используя guard expressions. Если все данные верны,
 // функция должна возвращать сообщение "Форма успешно отправлена".
 
-function (name, email, password) {
+function validateForm (name, email, password) {
   if (!name) {
-    return console.log('Ошибка')
+    return console.log('Ошибка: поле имени не заполнено')
   }
 
   if (!email.includes('@')) {
-    return console.log('Ошибка')
+    return console.log('Ошибка: неверный email')
   }
 
   if (!password) {
-    return ('Ошибка')
+    return ('Ошибка: поле пароля заполнено не верно')
   }
 
   console.log('Форма успешно отправлена')
 }
+
+validateForm
